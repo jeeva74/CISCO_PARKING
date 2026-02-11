@@ -1,0 +1,71 @@
+Timestamp,Hour,Weekday,Occupied,Available
+2026-02-02T16:14:18,16,Monday,0,50
+2026-02-02T16:16:12,16,Monday,0,50
+2026-02-02T16:18:36,16,Monday,0,50
+2026-02-02T16:20:10,16,Monday,0,50
+2026-02-02T16:41:44,16,Monday,0,50
+2026-02-02T16:49:21,16,Monday,0,50
+2026-02-02T16:52:07,16,Monday,0,50
+2026-02-02T16:53:41,16,Monday,0,50
+2026-02-03T08:55:50,8,Tuesday,0,50
+2026-02-03T08:56:40,8,Tuesday,0,50
+2026-02-03T09:23:18,9,Tuesday,0,50
+2026-02-03T09:27:17,9,Tuesday,0,50
+2026-02-03T09:27:42,9,Tuesday,0,50
+2026-02-03T09:28:56,9,Tuesday,0,25
+2026-02-03T09:29:43,9,Tuesday,0,15
+2026-02-03T09:30:44,9,Tuesday,0,9
+2026-02-03T13:55:02,13,Tuesday,0,10
+2026-02-03T13:58:38,13,Tuesday,0,10
+2026-02-04T09:21:28,9,Wednesday,0,10
+2026-02-04T09:25:21,9,Wednesday,0,10
+2026-02-04T09:28:57,9,Wednesday,0,10
+2026-02-04T09:33:01,9,Wednesday,0,10
+2026-02-04T09:36:34,9,Wednesday,0,10
+2026-02-04T09:36:52,9,Wednesday,0,10
+2026-02-04T09:39:39,9,Wednesday,0,10
+2026-02-04T09:41:29,9,Wednesday,0,10
+2026-02-04T09:44:25,9,Wednesday,0,10
+2026-02-04T09:46:48,9,Wednesday,0,10
+2026-02-04T09:47:23,9,Wednesday,0,10
+2026-02-04T10:04:51,10,Wednesday,0,10
+2026-02-05T11:26:29,11,Thursday,0,10
+2026-02-05T11:27:56,11,Thursday,0,10
+2026-02-05T11:29:21,11,Thursday,0,10
+2026-02-05T11:30:55,11,Thursday,0,10
+2026-02-05T11:33:20,11,Thursday,0,10
+2026-02-05T11:35:03,11,Thursday,0,10
+2026-02-05T11:36:54,11,Thursday,0,10
+2026-02-05T11:38:37,11,Thursday,0,10
+2026-02-05T11:39:52,11,Thursday,0,10
+2026-02-05T11:55:52,11,Thursday,0,10
+2026-02-05T11:56:37,11,Thursday,0,10
+2026-02-05T11:58:21,11,Thursday,0,10
+2026-02-05T12:00:30,12,Thursday,0,10
+2026-02-05T12:01:32,12,Thursday,0,10
+2026-02-05T12:09:38,12,Thursday,0,10
+2026-02-05T12:21:20,12,Thursday,10,0,0,0,10,Available,12:21,Likely available
+2026-02-05T13:47:05,13,Thursday,10,0,0,0,10,Available,13:47,Likely available
+2026-02-05T13:54:16,13,Thursday,10,0,0,0,10,Available,13:54,Likely available
+2026-02-05T13:56:48,13,Thursday,10,0,0,0,10,Available,13:56,Likely available
+2026-02-05T14:00:23,14,Thursday,10,0,0,0,10,Available,14:00,Likely available
+2026-02-05T14:05:44,14,Thursday,10,0,0,0,10,Available,14:05,Likely available
+2026-02-05T14:13:28,14,Thursday,10,0,0,0,10,Available,14:13,Likely available
+2026-02-05T14:18:48,14,Thursday,10,0,0,0,10,Available,14:18,Likely available
+2026-02-05T14:20:11,14,Thursday,10,0,0,0,10,Available,14:20,Likely available
+2026-02-05T14:24:50,14,Thursday,10,0,0,0,10,Available,14:24,Likely available
+2026-02-05T14:25:37,14,Thursday,10,0,0,0,10,Available,14:25,Likely available
+2026-02-05T14:26:31,14,Thursday,10,0,0,0,10,Available,14:26,Likely available
+2026-02-05T14:30:52,14,Thursday,10,0,0,0,10,Available,14:30,Likely available
+2026-02-05T14:33:51,14,Thursday,10,0,0,0,10,Available,14:33,Likely available
+2026-02-05T14:40:02,14,Thursday,10,0,0,0,10,Available,14:40,Likely available
+2026-02-05T16:12:24,16,Thursday,10,0,0,0,10,Available,16:12,Likely available
+2026-02-06T09:04:00,9,Friday,10,0,0,0,10,Available,09:04,Likely available
+2026-02-07T09:07:55,9,Saturday,10,0,0,0,10,Available,09:07,Likely available
+2026-02-07T09:15:22,9,Saturday,10,0,0,0,10,Available,09:15,Likely available
+2026-02-07T09:17:51,9,Saturday,10,0,0,0,10,Available,09:17,Likely available
+2026-02-07T09:24:58,9,Saturday,10,0,0,0,10,Available,09:24,Likely available
+2026-02-07T09:41:27,9,Saturday,10,0,0,0,10,Available,09:41,Likely available
+2026-02-07T09:42:22,9,Saturday,10,0,0,0,10,Available,09:42,Likely available
+2026-02-07T11:06:38,11,Saturday,10,0,0,0,10,Available,11:06,Likely available
+2026-02-09T11:13:30,11,Monday,10,0,0,0,10,Available,11:13,Likely available
