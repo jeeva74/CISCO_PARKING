@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Logs
+*.log
+snapshot_log.txt
+
+# Images
+*.jpg
+*.png
+
+# Model weights
+*.pt
+
+# Env files
+.env
