@@ -1,3 +1,4 @@
+
 'use client'
 
 import { ParkingStatsCard } from '@/components/parking-stats-card'
@@ -7,19 +8,34 @@ import { Bike, Car, Activity } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { RefreshCw } from 'lucide-react'
 import { useParkingData } from '@/hooks/use-parking'
+import { useState } from 'react'
 
 export default function Dashboard() {
   // Use backend-driven state via custom hook
   const { data, loading, error, refresh } = useParkingData(5000)
+  const [alarmStopping, setAlarmStopping] = useState(false)
 
   // Fallbacks while data loads
   const two = data?.twoWheeler ?? { available: 0, occupied: 0, total: 0 }
   const four = data?.fourWheeler ?? { available: 0, occupied: 0, total: 0 }
+  const prediction = data?.predictions
 
-  const totalAvailable = two.available + four.available
   const totalOccupied = two.occupied + four.occupied
-  const totalSpaces = (two.total || 0) + (four.total || 0) || 0
+  const totalSpaces = 10
+  const totalAvailable = Math.max(0, totalSpaces - totalOccupied)
   const capacity = totalSpaces > 0 ? Math.round((totalOccupied / totalSpaces) * 100) : 0
+  const isFull = totalOccupied >= totalSpaces
+
+  const stopAlarm = async () => {
+    setAlarmStopping(true)
+    try {
+      const apiBase = (process.env.NEXT_PUBLIC_API_BASE as string) || 'http://localhost:5000'
+      await fetch(`${apiBase}/api/alarm/stop`, { method: 'POST' })
+    } finally {
+      setAlarmStopping(false)
+    }
+  }
+
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-background via-background to-background/95">
@@ -45,6 +61,13 @@ export default function Dashboard() {
                 <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                 Refresh
               </Button>
+              <Button
+                onClick={stopAlarm}
+                disabled={!isFull || alarmStopping}
+                className="bg-destructive hover:bg-destructive/90 text-white"
+              >
+                {alarmStopping ? 'Stopping Alarm...' : 'Stop Alarm'}
+              </Button>
               {error && <div className="text-sm text-destructive">Error: {error}</div>}
             </div>
           </div>
@@ -55,6 +78,12 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Overall Stats */}
         <div className="mb-8">
+          {totalOccupied >= totalSpaces && prediction?.free_at && (
+            <div className="mb-4 rounded-lg border border-yellow-500 bg-yellow-400 px-4 py-3 text-sm font-semibold text-yellow-950 shadow-md">
+              Parking is full. Estimated free slot at {prediction.free_at}
+              {prediction.free_in_minutes ? ` (about ${prediction.free_in_minutes} min)` : ''}.
+            </div>
+          )}
           <OverallStatsCard
             totalAvailable={totalAvailable}
             totalOccupied={totalOccupied}
